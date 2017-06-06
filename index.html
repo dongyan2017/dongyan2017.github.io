@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>loving 爱雯茜</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
+	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+	<meta name="author" content="FREEHTML5.CO" />
+
+	
+	
+  	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+	
+	
+	
+		<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments">胖妞，21岁快乐</span><br />
+				<span class="space"/><span class="comments">第一次生日没有帮你过，很是抱歉！</span><br />
+				<span class="space"/><span class="comments">第二次也没法在你身边帮你过，非常抱歉！</span><br />
+				<span class="space"/><span class="comments">不过你的幸福快乐，是我一生的追求。</span><br />
+				<span class="space"/>以后一定帮你过每一个生日！<br />
+				<span class="space"/>起初回来的时候想以你送我钢笔的方式，<br />
+				<span class="space"/>去送你一个手表，一套欠你好久的眼霜，还有一个我亲手写的小纸条；<br />
+				<span class="space"/>但是快递那边真的出了点问题，寄过来，再给你寄过去真的时间不够了；<br />
+				<span class="space"/>所以只好手表只好直接给你寄过去了；<br />
+				<span class="space"/>纸条就以这个网页代替吧，<br />
+				<span class="space"/>祝你生日快乐，<br />
+				<span class="space"/>青春常驻，<br />
+				<span class="space"/>漂漂亮亮，<br />
+				<span class="space"/>开开心心。<br />
+				<span class="keyword">最后，<br />
+				<span class="space"/>我向你说声对不起，<br />
+				<span class="space"/>惹你太多的生气，<br />
+				<span class="space"/>保证以后不会了。<br />
+				<span class="space"/>所有我们经历的点点滴滴，<br />都是我们一辈子最美的回忆。</span> <br />
+				<br />
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						二狗子和大胖妞在一起的
+						<div id="elapseClock"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+	
+	
+	
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2015, 12, 1);
+		together.setHours(20);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "你的浏览器不支持HTML5!<br/>换个浏览器呗！美女"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+	
+	
+	
+	
+	
+	
+		
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+	<nav class="fh5co-nav" role="navigation">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-2">
+					<div id="fh5co-logo"><a href="index.html">loving</a></div>
+				</div>
+				<div class="col-xs-10 text-right menu-1">
+					<ul>
+						<li class="active"><a href="index.html">Home</a></li>
+						<li><a href="#fh5co-couple-story">Story</a></li>
+						<li><a href="#video">Video</a></li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+	</nav>
+
+	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/img_bg_2.jpg);" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<div class="display-t">
+						<div class="display-tc animate-box" data-animate-effect="fadeIn">
+							<h1>大胖妞</h1>
+							<h2>二狗子祝你</h2>
+							<div class="simply-countdown simply-countdown-one">
+							<div class="simply-section simply-hours-section">
+							<div style="padding-top:20px;" class="simply-amount">生
+							</div>
+							</div>
+												<div style="padding-top:20px;" class="simply-section simply-hours-section">
+							<div class="simply-amount">日
+							</div>
+							</div>
+														<div style="padding-top:20px;" class="simply-section simply-hours-section">
+							<div class="simply-amount">快
+							</div>
+							</div>
+														<div style="padding-top:20px;" class="simply-section simply-hours-section">
+							<div class="simply-amount">乐
+							</div>
+							</div>
+					</div>
+
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div id="fh5co-couple">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+					<h2>birthday!</h2>
+					<h3>June 7th, 2017 Yi Chang, HUBEI</h3>
+				</div>
+			</div>
+			<div class="couple-wrap animate-box">
+				<div class="couple-half">
+					<div class="groom">
+						<img src="images/groom.jpg" alt="groom" class="img-responsive">
+					</div>
+					<div class="desc-groom">
+						<h3>二狗子</h3>
+						<p>一个笨笨的大笨猪，但深深爱着对对面的大胖妞！</p>
+					</div>
+				</div>
+				<p class="heart text-center"><i class="icon-heart2"></i></p>
+				<div class="couple-half">
+					<div class="bride">
+						<img src="images/bride.jpg" alt="groom" class="img-responsive">
+					</div>
+					<div class="desc-bride">
+						<h3>大胖妞</h3>
+						<p>一个胖胖的大胖妞，但深深爱着对对面的大笨猪！</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="fh5co-event" class="fh5co-bg" style="background-image:url(images/img_bg_3.jpg);">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+					<span>Our Special Events</span>
+					<h2>异地恋</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="display-t">
+					<div class="display-tc">
+						<div class="col-md-10 col-md-offset-1">
+							<div class="col-md-6 col-sm-6 text-center">
+								<div class="event-wrap animate-box">
+									<h3>徐州</h3>
+									<div class="event-col">
+										<i class="icon-clock"></i>
+										<span>12:05 PM</span>
+										<span>16:37 PM</span>
+										
+									</div>
+									<div class="event-col">
+										<i class="icon-calendar"></i>
+										<span>May 1</span>
+										<span>May 1</span>
+									</div>
+									<p>为你我用了半年的积蓄<br>
+漂洋过海的来看你<br>
+为了这次相聚<br>
+我连见面时的呼吸都曾反复练习<br>
+言语从来没能<br>
+将我的情意表达千万分之一<br>
+我在夜里想了又想不肯睡去<br>
+记忆它总是慢慢的累积<br>
+</p>
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-6 text-center">
+								<div class="event-wrap animate-box">
+									<h3>宜昌</h3>
+									<div class="event-col">
+										<i class="icon-clock"></i>
+										<span>18:05 PM</span>
+										<span>11:08 AM</span>
+									</div>
+									<div class="event-col">
+										<i class="icon-calendar"></i>
+										<span>May 3</span>
+										<span>May 3</span>
+									</div>
+									<p>
+									在我心中无法抹去<br>
+为了你的承诺<br>
+不管将面对什么样的结局<br>
+在漫天风沙里<br>
+望着你远去<br>
+我竟悲伤得不能自己<br>
+多盼望送君千里直到山穷水尽<br>
+一生和你相依<br>
+</p>								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="fh5co-couple-story">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+					<span>We Love Each Other</span>
+					<h2>Our Story</h2>
+					<p>Do a not sad child and you together for a lifetime, only do a not sad child only and you a lifetime together.</p>			</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 col-md-offset-0">
+					<ul class="timeline animate-box">
+						<li class="animate-box">
+							<div class="timeline-badge" style="background-image:url(images/couple-1.jpg);"></div>
+							<div class="timeline-panel">
+								<div class="timeline-heading">
+									<h3 class="timeline-title">First We Meet</h3>
+									<span class="date">December 25, 2015</span>
+								</div>
+								<div class="timeline-body">
+									<p>盼了好久的见面终于见面了，紧张而期待！</p>								</div>
+							</div>
+						</li>
+						<li class="timeline-inverted animate-box">
+							<div class="timeline-badge" style="background-image:url(images/couple-2.jpg);"></div>
+							<div class="timeline-panel">
+								<div class="timeline-heading">
+									<h3 class="timeline-title">First Date</h3>
+									<span class="date">February 14, 2017</span>
+								</div>
+								<div class="timeline-body">
+									<p>情人节，必须去！不过的确过了一个与众不同的情人节！难忘！</p></div>
+							</div>
+						</li>
+						<li class="animate-box">
+							<div class="timeline-badge" style="background-image:url(images/couple-3.jpg);"></div>
+							<div class="timeline-panel">
+								<div class="timeline-heading">
+									<h3 class="timeline-title">Meet in xvzhou</h3>
+									<span class="date">May 1, 2017</span>
+								</div>
+								<div class="timeline-body">
+									<p>胖妞第一次一个人千里迢迢的过来看我，很是感动！好好爱她！</p>								</div>
+							</div>
+						</li>
+			    	</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="fh5co-gallery" class="fh5co-section-gray">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+					<span>Our Memories</span>
+					<h2>loving Gallery</h2>
+					<p>在这个世上还有这样一群人，他们的爱情隔着千山万水，他们承受着旁人无法理解的痛苦，只因为他们知道在那个遥远的城市，有着自己想要的幸福。他们不能陪对方逛街，只好把思念一次一次的寄过去，他们在对方难过时，只能用苍白得短信给予安慰；在对方无助时，只能手里握着电话努力的听对方的呼吸和哭泣的音。</p>
+				</div>
+			</div>
+			<div class="row row-bottom-padded-md">
+				<div class="col-md-12">
+					<ul id="fh5co-gallery-list">
+						
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-1.jpg); "> 
+						<a href="images/gallery-1.jpg">
+							<div class="case-studies-summary">
+								<span>三游洞</span>
+								<h2>YEAH</h2>
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-2.jpg); ">
+						<a href="#" class="color-2">
+							<div class="case-studies-summary">
+								<span>玻璃栈道</span>
+								<h2>4 foots</h2>
+							</div>
+						</a>
+					</li>
+
+
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-3.jpg); ">
+						<a href="#" class="color-3">
+							<div class="case-studies-summary">
+								<span>电影院</span>
+								<h2>Beautiful family</h2>
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-4.jpg); ">
+						<a href="#" class="color-4">
+							<div class="case-studies-summary">
+								<span>海底世界</span>
+								<h2>The girl under the Sea</h2>
+							</div>
+						</a>
+					</li>
+
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-5.jpg); ">
+							<a href="#" class="color-3">
+								<div class="case-studies-summary">
+									<span>海底世界</span>
+									<h2>Cute</h2>
+								</div>
+							</a>
+						</li>
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-6.jpg); ">
+							<a href="#" class="color-4">
+								<div class="case-studies-summary">
+									<span>神农架滑雪场</span>
+									<h2>Skater girl in the gate</h2>
+								</div>
+							</a>
+						</li>
+
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-7.jpg); ">
+							<a href="#" class="color-4">
+								<div class="case-studies-summary">
+									<span>情人谷</span>
+									<h2>Paradise Kiss</h2>
+								</div>
+							</a>
+						</li>
+
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-8.jpg); "> 
+							<a href="#" class="color-5">
+								<div class="case-studies-summary">
+									<span>神农架滑雪场</span>
+									<h2>Man Mountain Man Sea</h2>
+								</div>
+							</a>
+						</li>
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-9.jpg); ">
+							<a href="#" class="color-6">
+								<div class="case-studies-summary">
+									<span>招待所</span>
+									<h2>Nowhere not take pictures</h2>
+								</div>
+							</a>
+						</li>
+					</ul>		
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	
+
+	<div id="fh5co-services" class="fh5co-section-gray">
+		<div class="container">
+			
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>We Are Looking Forward To</h2>
+					<p>The lovers finally got married.; All shall be well; Jack shall have Jill.</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="feature-left animate-box" data-animate-effect="fadeInLeft">
+						<span class="icon">
+							<i class="icon-calendar"></i>
+						</span>
+						<div class="feature-copy">
+							<h3>难忘时刻</h3>
+							<p>和你在一起的每一件事情，每一天，在脑海里都是那么的清晰！</p>
+						</div>
+					</div>
+
+					<div class="feature-left animate-box" data-animate-effect="fadeInLeft">
+						<span class="icon">
+							<i class="icon-image"></i>
+						</span>
+						<div class="feature-copy">
+							<h3>照片收集</h3>
+							<p>美好的照片都会一一的去更新和收藏！</p>
+						</div>
+					</div>
+
+					<div class="feature-left animate-box" data-animate-effect="fadeInLeft">
+						<span class="icon">
+							<i class="icon-video"></i>
+						</span>
+						<div class="feature-copy">
+							<h3>视频推荐</h3>
+							<p>看了好多关于异地恋的视频，特此推荐你这一个！谢谢你的爱！</p>
+						</div>
+					</div>
+
+				</div>
+
+				<div id ="video" class="col-md-6 animate-box">
+				<embed src='http://player.youku.com/player.php/sid/XMTc1NTk4NTUzMg==/v.swf' allowFullScreen='true' quality='high' width='480' height='400' align='middle' allowScriptAccess='always' type='application/x-shockwave-flash'></embed>
+				</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+
+	<div id="fh5co-started" class="fh5co-bg" style="background-image:url(images/img_bg_4.jpg);">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>I love you not because of who you are,but because of who I am when I am with you.</h2>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+
+			<div class="row copyright">
+				<div class="col-md-12 text-center">
+					<p>
+						<small class="block">loving  2016-  爱上和雯茜约会</small> 
+						</p>
+				</div>
+			</div>
+
+		</div>
+	</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- countTo -->
+	<script src="js/jquery.countTo.js"></script>
+
+	<!-- Stellar -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+
+	<!-- // <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script> -->
+	<script src="js/simplyCountdown.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	
+	</body>
+</html>
